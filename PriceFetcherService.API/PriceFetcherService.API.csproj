@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>d2461e9e-78b0-4b65-a3ef-6bb1ff9dcdd8</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ArbitrageTaskAssignment.ServiceDefaults\ArbitrageTaskAssignment.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\PriceFetcherService.Abstraction\PriceFetcherService.Abstraction.csproj" />
+    <ProjectReference Include="..\PriceFetcherService.Implementation\PriceFetcherService.Implementation.csproj" />
+  </ItemGroup>
+
+</Project>
